@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch",
+    "prod": "mix --production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "alpinejs": "^3.0.6",
+    "laravel-mix": "^6.0.23"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.1"
+  }
+}
