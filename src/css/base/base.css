@@ -1,3 +1,9 @@
 body {
   color: theme('colors.gray.dark');
+  @apply antialiased;
+}
+
+.bg-waves {
+  background: url('../images/waves.png') center no-repeat;
+  background-size: cover;
 }

@@ -1,0 +1,10 @@
+.btn-more {
+  font-size: theme('fontSize.lg');
+  font-weight: theme('fontWeight.bold');
+  font-family: theme('fontFamily.display');
+  color: theme('colors.blue.DEFAULT');
+
+  &::after {
+    content: '';
+  }
+}

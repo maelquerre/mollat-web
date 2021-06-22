@@ -37,6 +37,7 @@ module.exports = {
     fontFamily: {
       sans: ['Lato', 'sans-serif'],
       display: ['Oswald', 'sans-serif'],
+      cursive: ['Nothing You Could Do', 'sans-serif'],
     },
     extend: {},
   },
