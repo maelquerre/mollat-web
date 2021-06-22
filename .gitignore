@@ -1,8 +1,7 @@
 .idea/
 node_modules/
-public/css
-public/images
-public/js
+public/css/
+public/js/
 
 .DS_Store
 mix-manifest.json
