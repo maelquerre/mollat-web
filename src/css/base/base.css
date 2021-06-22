@@ -1,3 +1,19 @@
 body {
   color: theme('colors.darkGray');
 }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: 1700px) {
+    width: 1500px;
+  }
+  @media (min-width: 1025px) {
+    width: 1000px;
+  }
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
