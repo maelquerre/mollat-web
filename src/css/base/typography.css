@@ -1,0 +1,11 @@
+.h1, .h2, .h3 {
+  font-family: theme('fontFamily.display');
+}
+
+.h2 {
+  font-size: theme('fontSize.4xl');
+}
+
+.h3 {
+  font-size: theme('fontSize.2xl');
+}
