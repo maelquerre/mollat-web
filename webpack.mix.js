@@ -1,3 +1,9 @@
 const mix = require('laravel-mix');
 
-mix.sass('src/scss/index.scss', 'public/assets/css/index.css').js('src/js/index.js', 'public/assets/js/index.js');
+mix
+  .sass('src/scss/index.scss', 'public/css/index.css')
+  .options({
+    processCssUrls: false,
+  })
+  .js('src/js/index.js', 'public/js/index.js')
+  .copy('src/images/', 'public/images/', false);
