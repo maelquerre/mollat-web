@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 window.Alpine = Alpine;
 
 /* Banner */
-window.setupBannerData = function () {
+window.setupTimeLeft = function () {
   const today = dayjs();
   const christmas = dayjs()
     .set('day', 24)

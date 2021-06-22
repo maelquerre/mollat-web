@@ -8,3 +8,14 @@
     content: '';
   }
 }
+
+.btn-social {
+  background-color: white;
+  box-shadow: 4px 4px 11px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 47px;
+}
