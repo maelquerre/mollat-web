@@ -20,6 +20,34 @@
 
   <body>
     <main>
+      <!-- BANNER -->
+      <section class="banner">
+        <div class="container flex justify-center items-center flex-col sm:flex-row">
+          <div class="w-1/3 hidden lg:block"></div>
+          <div class="banner__text w-full sm:w-1/2 lg:1/3">
+            <p class="banner__heading">Calendrier de l’avent Mollat</p>
+            <p class="banner__subheading">Le compte à rebours est lancé !</p>
+          </div>
+          <div
+            x-data="setupBannerData()"
+            class="flex justify-center sm:justify-end w-full sm:w-1/2 lg:1/3 mt-8 sm:mt-0"
+          >
+            <div class="banner__time">
+              <span>Jours</span>
+              <span x-text="daysLeft"></span>
+            </div>
+            <div class="banner__time">
+              <span>Heures</span>
+              <span x-text="hoursLeft"></span>
+            </div>
+            <div class="banner__time">
+              <span>Minutes</span>
+              <span x-text="minutesLeft"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="">
         <div class="flex">
           <div class="bg-gray-light">
