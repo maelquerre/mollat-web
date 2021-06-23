@@ -1,4 +1,5 @@
 .btn-more {
+  display: inline-block;
   font-size: theme('fontSize.lg');
   font-weight: theme('fontWeight.bold');
   font-family: theme('fontFamily.display');
