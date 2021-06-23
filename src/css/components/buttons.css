@@ -6,6 +6,13 @@
 
   &::after {
     content: '';
+    background-image: url('../images/drawn-arrow.png');
+    background-size: cover;
+    width: 59px;
+    height: 33px;
+    display: inline-block;
+    transform: translateY(8px);
+    margin-left: 8px;
   }
 }
 
