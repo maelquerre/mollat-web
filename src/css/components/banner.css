@@ -6,7 +6,8 @@
   padding: theme('spacing.2') 0;
   background-image: url('../images/banner-bg.png');
   background-color: theme('colors.white');
-  box-shadow: 3px 3px 14px rgba(0, 0, 0, .08);
+  box-shadow: 3px 3px 14px rgba(0, 0, 0, 0.08);
+  z-index: 2;
 
   &__text {
     text-align: center;
