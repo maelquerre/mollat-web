@@ -1,9 +1,15 @@
 .h1, .h2, .h3 {
   font-family: theme('fontFamily.display');
+  font-weight: theme('fontWeight.medium');
+  line-height: theme('lineHeight.tight');
 }
 
 .h2 {
-  font-size: theme('fontSize.4xl');
+  font-size: theme('fontSize.2xl');
+
+  @screen md {
+    font-size: theme('fontSize.4xl');
+  }
 }
 
 .h3 {

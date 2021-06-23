@@ -20,15 +20,18 @@
 
   <body>
     <main>
-      <!-- BANNER -->
-      <section class="banner">
+      <!-- Banner -->
+      <header class="banner">
         <div class="container flex justify-center items-center flex-col sm:flex-row">
           <div class="w-1/3 hidden lg:block"></div>
           <div class="banner__text w-full sm:w-1/2 lg:w-1/3">
             <p class="banner__heading">Calendrier de l’avent Mollat</p>
             <p class="banner__subheading">Le compte à rebours est lancé !</p>
           </div>
-          <div x-data="setupTimeLeft()" class="flex justify-center sm:justify-endw-full sm:w-1/2 lg:w-1/3 mt-8 sm:mt-0">
+          <div
+            class="flex justify-center w-full mt-8 sm:justify-end sm:w-1/2 sm:mt-0 lg:w-1/3"
+            x-data="setupTimeLeft()"
+          >
             <div class="flex flex-col items-center justify-center left-time">
               <span>Jours</span>
               <span x-text="daysLeft"></span>
@@ -43,17 +46,24 @@
             </div>
           </div>
         </div>
-      </section>
+      </header>
 
-      <!-- HERO -->
+      <!-- Hero section -->
       <section class="container hero flex flex-col justify-center">
-        <h1 class="h1 text-5xl md:text-8xl text-blue w-100 leading-normal md:leading-normal">
-          Préparez Noël <br />avec notre sélection
-        </h1>
-        <a href="#" class="btn-more mt-6">Découvrir notre sélection</a>
+        <div>
+          <h1 class="h1 text-5xl md:text-7xl text-blue w-100 leading-normal md:leading-normal">
+            Préparez Noël<br>avec notre sélection
+          </h1>
+          <a
+            class="btn-more mt-6"
+            href="#"
+          >
+            Découvrir notre sélection
+          </a>
+        </div>
       </section>
 
-      <!-- CALENDRIER -->
+      <!-- Calendar section -->
       <section class="container flex flex-wrap py-12 sm:py-24">
         <div class="flex flex-col w-full sm:w-1/2">
           <h2 class="h2">Calendrier de l’avent Mollat</h2>
@@ -108,33 +118,44 @@
         </div>
       </section>
 
-      <!-- COUPS DE CŒUR -->
+      <!-- "Coups de cœur" section -->
       <section class="">
         <div class="flex flex-wrap">
-          <div class="bg-gray-light w-full md:w-2/5">
-            <h2 class="h2">Nos livres coups de cœur</h2>
-            <img alt="" class="max-w-xs" src="./images/books/les-fossoyeuses.jpg" />
-            <div class="mb-4 text-2xl font-bold">Les fossoyeuses - Taïna Tervonen</div>
+          <div class="w-full py-14 px-5 bg-gray-light md:w-2/5">
+            <div class="mb-6">
+              <h2 class="h2">Nos livres coups de cœur</h2>
+            </div>
+
+            <img alt="" class="w-full max-w-xs mb-7" src="./images/books/les-fossoyeuses.jpg" />
+            <div class="mb-2 text-lg font-bold md:mb-4 md:text-2xl">Les fossoyeuses - Taïna Tervonen</div>
             <div class="mb-8 font-light">Éditeur(s) : Editions Marchialy</div>
-            <div>
+            <div class="mb-9 md:mb-10">
               En Bosnie-Herzégovine, pays marqué par la guerre, Senem est anthropologue judiciaire chargée d'identifier
               les ossements humains retrouvés dans des anciens charniers. Darija, elle, enquête auprès des familles des
               disparus pour recueillir leur parole et prélever leur...
             </div>
 
-            <div class="flex justify-between">
+            <div class="flex items-center justify-between">
               <div class="font-light">14,50€</div>
               <button class="btn-more">Voir détails</button>
             </div>
           </div>
 
+          <!-- Scrolling text -->
           <div class="w-full">Deuil // Guerre // Histoire // Mémoire //</div>
 
-          <div class="w-full text-center text-white bg-blue bg-waves">
-            <h2 class="h2">Le petit mot de Laëticia</h2>
-            <div class="font-cursive">
-              « Ce livre est une plongée abyssale dans ces métiers ingrats, méconnus mais essentiels, qui visent à
-              redonner leur dignité aux victimes, et à soulager autant que possible les survivants. »
+          <div class="w-full py-14 px-5 text-center text-white bg-blue bg-waves md:py-56">
+            <div class="max-w-md mx-auto">
+              <img
+                alt=""
+                class="w-full"
+                src="./images/separator.svg"
+              >
+              <h2 class="h2">Le petit mot de Laëticia</h2>
+              <div class="font-cursive">
+                « Ce livre est une plongée abyssale dans ces métiers ingrats, méconnus mais essentiels, qui visent à
+                redonner leur dignité aux victimes, et à soulager autant que possible les survivants. »
+              </div>
             </div>
           </div>
         </div>
@@ -144,7 +165,7 @@
           <img src="./images/marin.png" alt="Marin" />
         </div>
         <div class="flex flex-col w-full sm:w-1/2">
-          <h2 class="h2">Où est Marin le pingouin ? <span class="font-cursive text-blue font-">#TrouverMarin</span></h2>
+          <h2 class="h2">Où est Marin le pingouin ? <span class="font-cursive text-blue">#TrouverMarin</span></h2>
           <p class="mt-6">
             Nous avons caché notre mascotte de Noël : nomdupingouin dans notre boutique ainsi que dans notre pop-up
             store. Rendez-vous sur nos réseaux sociaux pour remplir le défi de le retrouver !

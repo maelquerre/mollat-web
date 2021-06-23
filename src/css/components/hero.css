@@ -1,7 +1,8 @@
 .hero {
   height: 75vh;
   background-image: url('../images/hero.png');
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @media screen and (min-width: 620px) {
     height: 100vh;
