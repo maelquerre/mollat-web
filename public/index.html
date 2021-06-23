@@ -220,7 +220,33 @@
         </div>
 
         <div>
+          <div
+            x-data="{ displayedCategory: null, categories: ['Arts', 'Bandes dessinées', 'Jeunesse', 'Littérature'] }"
+          >
+            <label
+              class="block mb-4 text-gray"
+              for="categories"
+            >
+              Catégorie affichée
+            </label>
 
+            <select
+              id="categories"
+              class="block py-1 pl-2 pr-8"
+              required
+              x-model="displayedCategory"
+            >
+              <template
+                x-for="category in categories"
+                :key="category"
+              >
+                <option
+                  :value="category"
+                  x-text="category"
+                ></option>
+              </template>
+            </select>
+          </div>
         </div>
       </section>
     </main>
