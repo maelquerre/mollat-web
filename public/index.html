@@ -52,14 +52,9 @@
       <section class="container hero flex flex-col justify-center">
         <div>
           <h1 class="h1 text-5xl md:text-7xl text-blue w-100 leading-normal md:leading-normal">
-            Préparez Noël<br>avec notre sélection
+            Préparez Noël<br />avec notre sélection
           </h1>
-          <a
-            class="btn-more mt-6"
-            href="#"
-          >
-            Découvrir notre sélection
-          </a>
+          <a class="btn-more mt-6" href="#"> Découvrir notre sélection </a>
         </div>
       </section>
 
@@ -145,11 +140,7 @@
 
           <div class="w-full py-14 px-5 text-center text-white bg-blue bg-waves md:flex-grow md:w-auto md:py-56">
             <div class="max-w-sm mx-auto">
-              <img
-                alt=""
-                class="w-full"
-                src="./images/separator.svg"
-              >
+              <img alt="" class="w-full" src="./images/separator.svg" />
               <h2 class="h2 my-6 md:my-12">Le petit mot de Laëticia</h2>
               <div class="font-cursive text-3xl">
                 « Ce livre est une plongée abyssale dans ces métiers ingrats, méconnus mais essentiels, qui visent à
@@ -223,33 +214,18 @@
           <div
             x-data="{ displayedCategory: null, categories: ['Arts', 'Bandes dessinées', 'Jeunesse', 'Littérature'] }"
           >
-            <label
-              class="block mb-4 text-gray"
-              for="categories"
-            >
-              Catégorie affichée
-            </label>
+            <label class="block mb-4 text-gray" for="categories"> Catégorie affichée </label>
 
-            <select
-              id="categories"
-              class="block py-1 pl-2 pr-8"
-              required
-              x-model="displayedCategory"
-            >
-              <template
-                x-for="category in categories"
-                :key="category"
-              >
-                <option
-                  :value="category"
-                  x-text="category"
-                ></option>
+            <select id="categories" class="block py-1 pl-2 pr-8" required x-model="displayedCategory">
+              <template x-for="category in categories" :key="category">
+                <option :value="category" x-text="category"></option>
               </template>
             </select>
           </div>
         </div>
       </section>
 
+      <!-- Popup store section -->
       <section class="bg-blue bg-waves pt-14 md:pt-28 pb-14 md:pb-20">
         <div class="container">
           <h2 class="h2 text-white">Venez nous retrouver au Pop up Store !!</h2>
@@ -304,6 +280,71 @@
             Emballage cadeau spécial Mollat offert pour tout achat // Emballage cadeau spécial Mollat offert pour tout
             achat //&nbsp;
           </p>
+        </div>
+      </section>
+
+      <!-- Process section -->
+      <section class="bg-blue py-16">
+        <div class="container">
+          <h3 class="h3 text-white">Le concept est simple</h3>
+          <div class="flex flex-wrap -mx-1 sm:mt-8">
+            <div class="w-full sm:w-1/3 pt-12 sm:pt-0 px-2">
+              <img src="./images/step-1.png" alt="Etape 1" />
+              <p class="text-white pt-8">Venez flâner et voyager parmi nos différents univers</p>
+            </div>
+            <div class="w-full sm:w-1/3 pt-12 sm:pt-0 px-2">
+              <img src="./images/step-2.png" alt="Etape 2" />
+              <p class="text-white pt-8">Laissez vous séduire par notre sélection de Noël</p>
+            </div>
+            <div class="w-full sm:w-1/3 pt-12 sm:pt-0 px-2">
+              <img src="./images/step-3.png" alt="Etape 3" />
+              <p class="text-white pt-8">Emportez avec vous le livre idéal déjà empaqueté</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center sm:justify-between mt-8 sm:mt-16">
+            <img src="./images/presents.png" alt="Cadeaux" class="w-2/3 sm:w-4/12 object-contain" />
+            <div class="w-full sm:w-6/12 mt-16 sm:mt-0">
+              <div class="bg-blue-light py-8 px-8 sm:px-16 rounded-lg">
+                <div class="flex">
+                  <div class="mr-5">
+                    <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M6.5 0C2.91588 0 0 2.92437 0 6.51889C0 10.9798 5.81686 17.5287 6.06452 17.8053C6.29714 18.0651 6.70328 18.0647 6.93548 17.8053C7.18314 17.5287 13 10.9798 13 6.51889C12.9999 2.92437 10.0841 0 6.5 0ZM6.5 9.79873C4.69674 9.79873 3.22972 8.3274 3.22972 6.51889C3.22972 4.71038 4.69678 3.23909 6.5 3.23909C8.30322 3.23909 9.77024 4.71042 9.77024 6.51893C9.77024 8.32744 8.30322 9.79873 6.5 9.79873Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-white">
+                    Du samedi 18 novembre au samedi 2 janvier 8 rue de la Vieille Tour - Station Ausone Horaires Du
+                    lundi au samedi de 10h à 20 h Dimanche 29 novembre de 14h à 19 h Dimanche de décembre de 11h à 19 h
+                    Fermeture les 25 décembre et 1er janvier.
+                  </p>
+                </div>
+                <div class="flex mt-5">
+                  <div class="mr-5">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.207 10.5894L9.69728 8.70714V4.87293C9.69728 4.48741 9.38565 4.17578 9.00013 4.17578C8.6146 4.17578 8.30298 4.48741 8.30298 4.87293V9.05575C8.30298 9.27534 8.40616 9.48241 8.58184 9.61347L11.3704 11.7049C11.4958 11.799 11.6423 11.8443 11.788 11.8443C12.0006 11.8443 12.2097 11.7488 12.3464 11.5647C12.5779 11.2573 12.5151 10.8202 12.207 10.5894Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M9 0C4.0371 0 0 4.0371 0 9C0 13.9629 4.0371 18 9 18C13.9629 18 18 13.9629 18 9C18 4.0371 13.9629 0 9 0ZM9 16.6057C4.80674 16.6057 1.39426 13.1933 1.39426 9C1.39426 4.80674 4.80674 1.39426 9 1.39426C13.194 1.39426 16.6057 4.80674 16.6057 9C16.6057 13.1933 13.1933 16.6057 9 16.6057Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-white">
+                      <strong>Horaires</strong> <br />
+                      Du lundi au samedi de 10h à 20 h Dimanche 29 novembre de 14h à 19 h Dimanche de décembre de 11h à
+                      19h
+                    </p>
+                    <p class="text-white"><strong>Fermeture les 25 décembre et 1er janvier. </strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
