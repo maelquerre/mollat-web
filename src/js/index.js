@@ -23,4 +23,35 @@ window.setupTimeLeft = function () {
   return { daysLeft, hoursLeft, minutesLeft };
 };
 
+/* Calendar */
+window.setupCalendar = function () {
+  const today = dayjs('12/12/2021');
+  const books = [...Array(24)].map(() => ({
+    title: 'Les fossoyeuses',
+    cover: 'https://mollatcommon.blob.core.windows.net/notices57/2508511_medium.jpg',
+    editor: 'Editions Marchialy',
+    summary:
+      "En Bosnie-Herzégovine, pays marqué par la guerre, Senem est anthropologue judiciaire chargée d'identifier les ossements humains retrouvés dans des anciens charniers. Darija, elle, enquête auprès des familles des disparus pour recueillir leur parole et prélever leur ADN. Journaliste, l'auteure les a suivies pendant plusieurs années dans leur quête de vérité. ©Electre 2021",
+  }));
+  const cells = books.map((book, index) => {
+    const day = index + 1;
+    const cellDate = dayjs().set('day', day).set('month', 11).set('year', today.year());
+    const show = today.isSame(cellDate, 'day') || today.isAfter(cellDate, 'day');
+    return {
+      day,
+      book,
+      show,
+      quote: "On sent que rien n'est laissé au hasard, tout est très travaillé jusqu'au moindre détail",
+    };
+  });
+  /* Randomize cells order */
+  cells.sort(() => Math.random() - 0.5);
+  return {
+    cells,
+    getCellClasses(day) {
+      return `cell--${day}`;
+    },
+  };
+};
+
 Alpine.start();

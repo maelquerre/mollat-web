@@ -1,0 +1,66 @@
+.cell {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &--show {
+    background-color: theme('colors.blue.DEFAULT');
+    background-image: url('../images/calendar/flakes.png');
+    background-size: contain;
+  }
+
+  &--1 {
+    background-image: url('../images/calendar/cell-bg.png');
+  }
+  &--2 {
+    background-image: url('../images/calendar/cell-bg.png');
+  }
+  &--3 {
+    background-image: url('../images/calendar/cell-bg.png');
+  }
+  &--4 {
+    background-image: url('../images/calendar/cell-bg.png');
+  }
+  &--5 {
+    background-image: url('../images/calendar/cell-bg.png');
+  }
+  &--6 {
+    background-image: url('../images/calendar/cell-bg.png');
+  }
+  &--7 {
+    background-image: url('../images/calendar/cell-bg.png');
+  }
+  &--8,
+  &--9,
+  &--10,
+  &--11,
+  &--12,
+  &--13,
+  &--14,
+  &--15,
+  &--16,
+  &--17,
+  &--18,
+  &--19,
+  &--20,
+  &--21,
+  &--22,
+  &--23,
+  &--24 {
+    background-image: url('../images/calendar/cell-bg.png');
+  }
+}
