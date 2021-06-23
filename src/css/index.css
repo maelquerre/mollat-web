@@ -8,5 +8,6 @@
 @import './components/left-time.css';
 @import './components/hero.css';
 @import './components/scrolling-text.css';
+@import './components/videos.css';
 
 @import 'tailwindcss/utilities';
