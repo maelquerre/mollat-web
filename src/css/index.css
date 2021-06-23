@@ -9,5 +9,6 @@
 @import './components/hero.css';
 @import './components/scrolling-text.css';
 @import './components/videos.css';
+@import './components/icons.css';
 
 @import 'tailwindcss/utilities';
