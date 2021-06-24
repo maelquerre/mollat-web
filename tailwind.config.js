@@ -56,13 +56,14 @@ module.exports = {
             'transform-origin': '0 0',
           },
           to: {
-            transform: 'rotate(-90deg) translateX(-100%)'
+            transform: 'rotate(-90deg) translateX(-100%)',
+            'transform-origin': '0 0',
           },
         }
       },
       animation: {
         'scroll-text': 'scroll-text 32s linear infinite',
-        'scroll-text-vertical': 'scroll-text-vertical 16s linear infinite',
+        'scroll-text-vertical': 'scroll-text-vertical 32s linear infinite',
       }
     },
   },
