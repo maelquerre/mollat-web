@@ -1,3 +1,8 @@
+.calendar-pastille {
+  width: 90px;
+  height: 90px;
+}
+
 .cell {
   position: relative;
   background-size: cover;
@@ -19,48 +24,46 @@
 
   &--show {
     background-color: theme('colors.blue.DEFAULT');
-    background-image: url('../images/calendar/flakes.png');
-    background-size: contain;
+    background-image: url('../images/calendar/bg-flakes.png');
+    background-size: cover;
   }
 
-  &--1 {
-    background-image: url('../images/calendar/cell-bg.png');
-  }
-  &--2 {
-    background-image: url('../images/calendar/cell-bg.png');
-  }
+  &--1,
+  &--2,
   &--3 {
-    background-image: url('../images/calendar/cell-bg.png');
+    background-image: url('../images/calendar/cell-bg-1.png');
   }
-  &--4 {
-    background-image: url('../images/calendar/cell-bg.png');
-  }
-  &--5 {
-    background-image: url('../images/calendar/cell-bg.png');
-  }
+  &--4,
+  &--5,
   &--6 {
-    background-image: url('../images/calendar/cell-bg.png');
+    background-image: url('../images/calendar/cell-bg-2.png');
   }
-  &--7 {
-    background-image: url('../images/calendar/cell-bg.png');
-  }
+  &--7,
   &--8,
-  &--9,
+  &--9 {
+    background-image: url('../images/calendar/cell-bg-3.png');
+  }
   &--10,
   &--11,
-  &--12,
+  &--12 {
+    background-image: url('../images/calendar/cell-bg-4.png');
+  }
   &--13,
   &--14,
   &--15,
-  &--16,
+  &--16 {
+    background-image: url('../images/calendar/cell-bg-5.png');
+  }
   &--17,
   &--18,
   &--19,
-  &--20,
+  &--20 {
+    background-image: url('../images/calendar/cell-bg-6.png');
+  }
   &--21,
   &--22,
   &--23,
   &--24 {
-    background-image: url('../images/calendar/cell-bg.png');
+    background-image: url('../images/calendar/cell-bg-7.png');
   }
 }

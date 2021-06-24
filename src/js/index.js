@@ -25,7 +25,7 @@ window.setupTimeLeft = function () {
 
 /* Calendar */
 window.setupCalendar = function () {
-  const today = dayjs('12/12/2021');
+  const today = dayjs('12/02/2021');
   const books = [...Array(24)].map(() => ({
     title: 'Les fossoyeuses',
     cover: 'https://mollatcommon.blob.core.windows.net/notices57/2508511_medium.jpg',

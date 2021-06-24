@@ -1,11 +1,9 @@
-const colors = require('tailwindcss/colors')
-const plugin = require('tailwindcss/plugin')
+const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   mode: 'jit',
-  purge: [
-    './public/**/*.html',
-  ],
+  purge: ['./public/**/*.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
@@ -38,6 +36,7 @@ module.exports = {
       sans: ['Lato', 'sans-serif'],
       display: ['Oswald', 'sans-serif'],
       cursive: ['Nothing You Could Do', 'sans-serif'],
+      cursiveAlternative: ['Mr Dafoe', 'cursive'],
     },
     extend: {},
   },
@@ -49,13 +48,14 @@ module.exports = {
   },
   plugins: [
     plugin(function ({ addComponents, config }) {
-      const containersSizes = {}
+      const containersSizes = {};
 
-      Object.entries(config('theme.container.sizes')).forEach(([breakpoint, size]) => (
-        containersSizes[`@screen ${breakpoint}`] = {
-          maxWidth: size,
-        }
-      ))
+      Object.entries(config('theme.container.sizes')).forEach(
+        ([breakpoint, size]) =>
+          (containersSizes[`@screen ${breakpoint}`] = {
+            maxWidth: size,
+          })
+      );
 
       addComponents({
         '.container': {
@@ -65,8 +65,8 @@ module.exports = {
           paddingLeft: config('theme.container.padding'),
           paddingRight: config('theme.container.padding'),
           ...containersSizes,
-        }
-      })
-    })
+        },
+      });
+    }),
   ],
-}
+};
