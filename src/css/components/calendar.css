@@ -3,6 +3,10 @@
   height: 90px;
 }
 
+.calendar-book-image {
+  max-height: 180px;
+}
+
 .cell {
   position: relative;
   background-size: cover;
@@ -22,7 +26,7 @@
     right: 0;
   }
 
-  &--show {
+  &--today {
     background-color: theme('colors.blue.DEFAULT');
     background-image: url('../images/calendar/bg-flakes.png');
     background-size: cover;

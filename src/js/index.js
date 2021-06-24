@@ -35,17 +35,19 @@ window.setupCalendar = function () {
     cover: 'https://mollatcommon.blob.core.windows.net/notices57/2508511_medium.jpg',
     editor: 'Editions Marchialy',
     summary:
-      'En Bosnie-Herzégovine, pays marqué par la guerre, Senem est anthropologue judiciaire chargée d\'identifier les ossements humains retrouvés dans des anciens charniers. Darija, elle, enquête auprès des familles des disparus pour recueillir leur parole et prélever leur ADN. Journaliste, l\'auteure les a suivies pendant plusieurs années dans leur quête de vérité. ©Electre 2021',
+      "En Bosnie-Herzégovine, pays marqué par la guerre, Senem est anthropologue judiciaire chargée d'identifier les ossements humains retrouvés dans des anciens...",
+    price: 12.5,
+    link: 'https://www.mollat.com/livres/2508511/taina-tervonen-les-fossoyeuses',
   }));
   const cells = books.map((book, index) => {
     const day = index + 1;
     const cellDate = dayjs().set('day', day).set('month', 11).set('year', today.year());
-    const show = today.isSame(cellDate, 'day') || today.isAfter(cellDate, 'day');
     return {
       day,
       book,
-      show,
-      quote: 'On sent que rien n\'est laissé au hasard, tout est très travaillé jusqu\'au moindre détail',
+      passed: today.isAfter(cellDate, 'day') && !today.isSame(cellDate, 'day'),
+      today: today.isSame(cellDate, 'day'),
+      quote: "On sent que rien n'est laissé au hasard, tout est très travaillé jusqu'au moindre détail",
     };
   });
   /* Randomize cells order */
