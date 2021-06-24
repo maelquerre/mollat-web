@@ -7,13 +7,4 @@
   @media screen and (min-width: 620px) {
     height: 100vh;
   }
-
-  h1,
-  a {
-    padding-left: 30px;
-
-    @media screen and (min-width: 620px) {
-      padding-left: 30px;
-    }
-  }
 }
