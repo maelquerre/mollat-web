@@ -40,7 +40,31 @@ module.exports = {
       cursive: ['Nothing You Could Do', 'sans-serif'],
       cursiveAlternative: ['Mr Dafoe', 'cursive'],
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        'scroll-text': {
+          from: {
+            transform: 'translateX(0)'
+          },
+          to: {
+            transform: 'translateX(-50%)'
+          },
+        },
+        'scroll-text-vertical': {
+          from: {
+            transform: 'rotate(-90deg) translateX(-50%)',
+            'transform-origin': '0 0',
+          },
+          to: {
+            transform: 'rotate(-90deg) translateX(-100%)'
+          },
+        }
+      },
+      animation: {
+        'scroll-text': 'scroll-text 32s linear infinite',
+        'scroll-text-vertical': 'scroll-text-vertical 16s linear infinite',
+      }
+    },
   },
   variants: {
     extend: {},
@@ -70,5 +94,21 @@ module.exports = {
         },
       });
     }),
+
+    plugin(function ({ addUtilities }) {
+      const animations = {
+        '.scrolling-text': {
+          animation: 'scrolling 32s linear infinite',
+        },
+
+        '.scrolling-text-vertical': {
+          transform: 'rotate(-90deg) translateX(-100%)',
+          'transform-origin': '0 0',
+          animation: 'scrolling-vertical 16s linear infinite',
+        }
+      };
+
+      addUtilities(animations, ['responsive']);
+    })
   ],
 };
