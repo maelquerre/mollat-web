@@ -21,7 +21,7 @@ const books = [
     link: 'https://www.mollat.com/livres/2479015/patricia-arrou-vignod-heros-40-personnages-de-roman',
   },
   {
-    title: 'L\'appel du large  Cathy Ytak',
+    title: 'L\'appel du large - Cathy Ytak',
     description: 'Un album abordant les relations des humains avec la nature, l\'exil, la solidarité ainsi que la protection de la faune et de la flore.',
     price: '17,50 €',
     image_url: 'https://mollatcommon.blob.core.windows.net/notices55/2431798_medium.jpg',
