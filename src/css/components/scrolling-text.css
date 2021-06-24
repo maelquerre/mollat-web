@@ -1,5 +1,5 @@
 .scrolling-text {
-  animation: scrolling 16s linear infinite;
+  animation: scrolling 32s linear infinite;
 }
 
 @keyframes scrolling {
