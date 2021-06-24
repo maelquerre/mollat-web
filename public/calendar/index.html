@@ -31,7 +31,13 @@
                     fill="#001689"
                   />
                 </svg>
-                <div x-text="cell.day" class="text-5xl font-cursiveAlternative text-blue pt-4"></div>
+                <div class="flex w-full items-center">
+                  <div class="calendar-day-line calendar-day-line-before"></div>
+                  <div x-text="cell.day" class="text-5xl font-cursiveAlternative text-blue pt-4 text-center">
+                  </div>
+                  <div class="calendar-day-line calendar-day-line-after"></div>
+                </div>
+
                 <div class="cell w-full mt-9" :class="{[getCellClasses(cell.day)]: !cell.passed && !cell.today, 'cell--today': cell.today}">
                   <div class="cell__content flex flex-col justify-between p-6 sm:p-11" :class="{'items-center': !cell.passed && cell.today, 'p-0 sm:p-0': cell.passed}">
                     <img
