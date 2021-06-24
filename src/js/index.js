@@ -5,8 +5,7 @@ import { setupBooks } from './books';
 
 window.Alpine = Alpine;
 
-/* Banner */
-window.setupTimeLeft = function () {
+function computeTimeLeft() {
   const today = dayjs();
   const christmas = dayjs()
     .set('day', 24)
@@ -23,6 +22,24 @@ window.setupTimeLeft = function () {
   const minutesLeft = Math.floor(delta / 60) % 60;
   delta -= minutesLeft * 60;
   return { daysLeft, hoursLeft, minutesLeft };
+}
+
+/* Banner */
+window.setupTimeLeft = function () {
+  const { daysLeft, hoursLeft, minutesLeft } = computeTimeLeft();
+  return {
+    daysLeft,
+    hoursLeft,
+    minutesLeft,
+    startTimer() {
+      setInterval(() => {
+        const { daysLeft, hoursLeft, minutesLeft } = computeTimeLeft();
+        this.daysLeft = daysLeft;
+        this.hoursLeft = hoursLeft;
+        this.minutesLeft = minutesLeft;
+      }, 1000);
+    },
+  };
 };
 
 window.setupBooks = setupBooks;
