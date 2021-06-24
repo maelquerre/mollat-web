@@ -1,0 +1,18 @@
+.best-sellers_category-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: theme('colors.beige');
+  background-image: url('../images/illustration.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: theme('borderRadius.lg');
+}
+
+.best-sellers_category-inner {
+  width: 80%;
+  padding: theme('spacing.6') theme('spacing.4');
+  text-align: center;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: inherit;
+}

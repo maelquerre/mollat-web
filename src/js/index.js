@@ -1,6 +1,8 @@
 import Alpine from 'alpinejs';
 import dayjs from 'dayjs';
 
+import { setupBooks } from './books';
+
 window.Alpine = Alpine;
 
 /* Banner */
@@ -23,6 +25,8 @@ window.setupTimeLeft = function () {
   return { daysLeft, hoursLeft, minutesLeft };
 };
 
+window.setupBooks = setupBooks;
+
 /* Calendar */
 window.setupCalendar = function () {
   const today = dayjs('12/12/2021');
@@ -31,7 +35,7 @@ window.setupCalendar = function () {
     cover: 'https://mollatcommon.blob.core.windows.net/notices57/2508511_medium.jpg',
     editor: 'Editions Marchialy',
     summary:
-      "En Bosnie-Herzégovine, pays marqué par la guerre, Senem est anthropologue judiciaire chargée d'identifier les ossements humains retrouvés dans des anciens charniers. Darija, elle, enquête auprès des familles des disparus pour recueillir leur parole et prélever leur ADN. Journaliste, l'auteure les a suivies pendant plusieurs années dans leur quête de vérité. ©Electre 2021",
+      'En Bosnie-Herzégovine, pays marqué par la guerre, Senem est anthropologue judiciaire chargée d\'identifier les ossements humains retrouvés dans des anciens charniers. Darija, elle, enquête auprès des familles des disparus pour recueillir leur parole et prélever leur ADN. Journaliste, l\'auteure les a suivies pendant plusieurs années dans leur quête de vérité. ©Electre 2021',
   }));
   const cells = books.map((book, index) => {
     const day = index + 1;
@@ -41,7 +45,7 @@ window.setupCalendar = function () {
       day,
       book,
       show,
-      quote: "On sent que rien n'est laissé au hasard, tout est très travaillé jusqu'au moindre détail",
+      quote: 'On sent que rien n\'est laissé au hasard, tout est très travaillé jusqu\'au moindre détail',
     };
   });
   /* Randomize cells order */

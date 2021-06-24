@@ -205,22 +205,166 @@
         </div>
       </section>
 
-      <section class="container md:flex">
-        <div>
-          <h2 class="h2">Nos meilleures ventes de l'année</h2>
-        </div>
+      <section class="container py-16 md:py-28">
+        <h2 class="h2 mb-4 md:mb-8">Nos meilleures ventes de l'année</h2>
 
-        <div>
-          <div
-            x-data="{ displayedCategory: null, categories: ['Arts', 'Bandes dessinées', 'Jeunesse', 'Littérature'] }"
-          >
-            <label class="block mb-4 text-gray" for="categories"> Catégorie affichée </label>
+        <div
+          class="md:flex justify-between"
+          x-data="{ ...setupBooks(), activeCategory: 'Jeunesse' }"
+        >
+          <div class="md:w-2/5 py-20 md:py-0 best-sellers_category-wrapper">
+            <div class="best-sellers_category-inner">
+              <h4 class="mb-4 font-cursive text-3xl text-blue">
+                Jeunesse
+              </h4>
 
-            <select id="categories" class="block py-1 pl-2 pr-8" required x-model="displayedCategory">
-              <template x-for="category in categories" :key="category">
-                <option :value="category" x-text="category"></option>
+              <div>
+                <div class="mb-4">Découvrez notre sélection de Noël pour petits et grands ! De la petite enfance jusqu’aux jeunes de 12 ans, nous vous proposons une grande panoplie de livres adaptés.</div>
+
+                Laissez vous séduire par le papier cadeau Mollat dans notre pop-up store
+              </div>
+
+              <button class="btn-more mt-8">Voir catégorie</button>
+            </div>
+          </div>
+
+          <div class="mt-9 md:w-1/2 md:mt-0">
+            <div>
+              <label
+                class="block mb-2 text-gray"
+              >
+                Catégorie affichée
+              </label>
+
+              <div
+                class="mt-1 relative"
+                x-data="{ isOpen: false }"
+              >
+                <button
+                  class="relative w-full py-2 pl-6 pr-10 text-left bg-white border border-gray-alt rounded-xl shadow-sm cursor-pointer focus:outline-none"
+                  @click="isOpen = !isOpen"
+                >
+                  <span x-text="activeCategory"></span>
+                  <span class="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                    <template x-if="isOpen">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                      </svg>
+                    </template>
+                    <template x-if="!isOpen">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </template>
+                  </span>
+                </button>
+
+                <ul
+                  class="absolute w-full max-h-80 mt-1 px-6 text-base bg-white shadow-lg rounded-xl overflow-auto z-10 focus:outline-none"
+                  tabindex="-1"
+                  role="listbox"
+                  x-show="isOpen"
+                >
+                  <template
+                    x-for="(category, index) in categories"
+                    :key="category"
+                  >
+                    <li
+                      class="py-4 cursor-pointer select-none"
+                      :class="{
+                        'font-bold': category === activeCategory,
+                        'border-t border-blue': index !== 0
+                      }"
+                      role="option"
+                      @click="activeCategory = category; isOpen = false"
+                    >
+                      <div
+                        x-text="category"
+                      ></div>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <template
+                x-for="book in books"
+              >
+                <div class="mt-12 md:mt-14">
+                  <div class="md:flex md:items-start">
+                    <img
+                      alt=""
+                      class="w-28 mb-4 md:mb-0 md:mr-6"
+                      :src="book.image_url"
+                    >
+
+                    <div>
+                      <div
+                        class="mb-4 font-bold"
+                        x-text="book.title"
+                      ></div>
+                      <div
+                        class="text-gray"
+                        x-text="book.description"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div class="flex mt-3">
+                    <div class="hidden w-28 md:block md:mr-6"></div>
+
+                    <div class="flex-grow flex justify-between">
+                      <div
+                        class="font-bold"
+                        x-text="book.price"
+                      ></div>
+
+                      <a
+                        class="flex items-center text-blue"
+                        :href="book.link"
+                      >
+                        <span class="font-bold underline">Découvrir</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="ml-2 border border-blue rounded-full"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </template>
-            </select>
+            </div>
           </div>
         </div>
       </section>

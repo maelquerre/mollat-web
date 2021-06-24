@@ -17,6 +17,7 @@ module.exports = {
         DEFAULT: '#595959',
         dark: '#282828',
         light: '#f2f2f2',
+        alt: '#bebebe',
       },
       blue: {
         DEFAULT: '#001689',
@@ -31,6 +32,7 @@ module.exports = {
         sm: '620px',
         md: '750px',
         lg: '1000px',
+        xl: '1200px',
         '2xl': '1500px',
       },
     },
