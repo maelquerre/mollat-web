@@ -7,3 +7,41 @@ body {
   background: url('../images/waves.png') center no-repeat;
   background-size: cover;
 }
+
+.grid-background {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: minmax(1rem, 300rem);
+  position: absolute;
+  @apply inset-0;
+  padding: 0 theme('spacing.8');
+  background: none;
+  opacity: .2;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+
+  > * {
+    margin-top: -1px;
+    margin-bottom: -1px;
+    grid-row: 1 / -1;
+    background-color: transparent;
+    border-left: 1px solid rgba(0, 22, 137, .2);
+
+    &:nth-child(n + 6) {
+      display: none;
+    }
+
+    &:last-child {
+      border-right: 1px solid rgba(0, 22, 137, .2);
+    }
+  }
+
+  @screen md {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+
+    > *:nth-child(n + 6) {
+      display: block;
+    }
+  }
+}
