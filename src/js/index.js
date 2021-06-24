@@ -57,6 +57,14 @@ window.setupCalendar = function () {
     getCellClasses(day) {
       return `cell--${day}`;
     },
+    revealBook(day) {
+      this.cells = this.cells.map((cell) => {
+        if (cell.day === day) {
+          return { ...cell, passed: true, today: false };
+        }
+        return cell;
+      });
+    },
   };
 };
 

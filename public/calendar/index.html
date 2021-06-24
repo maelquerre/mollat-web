@@ -45,7 +45,7 @@
                       x-text='`"${cell.quote}"`''
                       class="font-cursive text-white text-2xl text-center p-t-3.5"
                     ></p>
-                    <button x-show="cell.today" class="bg-white text-blue font-bold text-sm py-3 px-14 rounded-md">Ouvrir la case</button>
+                    <button x-show="cell.today" class="bg-white text-blue font-bold text-sm py-3 px-14 rounded-md" @click="revealBook(cell.day)">Ouvrir la case</button>
                     <div>
                       <img x-show="cell.passed" :src="cell.book.cover" alt="Cover" class="calendar-book-image">
                     </div>
