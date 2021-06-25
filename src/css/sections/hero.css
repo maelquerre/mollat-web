@@ -8,3 +8,14 @@
     height: 100vh;
   }
 }
+
+.hero-calendar {
+  background-image: url('../images/calendar/bg-flakes-big.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 90px 0;
+
+  @media screen and (min-width: 620px) {
+    height: 75vh;
+  }
+}
